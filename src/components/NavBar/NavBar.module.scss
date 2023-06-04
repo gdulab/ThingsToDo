@@ -1,0 +1,32 @@
+@import '../../styles/settings.scss';
+
+.navBar {
+    background-color: darken($color-dark, 3%);
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.row {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    display: flex;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    margin: auto 10px;
+}
+
+.menuRight {
+    flex: 0 0 50%;
+    text-align: right;
+}
+
+.menuLeft {
+    flex: 0 0 50%;
+}
