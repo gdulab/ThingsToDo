@@ -1,15 +1,21 @@
 import styles from './List.module.scss';
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
-import { useSelector } from 'react-redux';
-import { getListById, getColumsByList } from '../../redux/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { getListById, getColumsByList, updateSearchString } from '../../redux/store';
 import { Navigate, useParams } from 'react-router-dom';
 import SearchForm from "../SearchForm/SearchForm";
+import { useEffect } from 'react';
 
 const List = () => {
+    const dispatch = useDispatch();
     const { listId } = useParams();
     const filteredColumns = useSelector(state => getColumsByList(state, listId));
     const listData = useSelector(state => getListById(state, listId));
+
+    useEffect(() => {
+        dispatch(updateSearchString(''));
+    }, [dispatch]);
 
     if(!listData) return <Navigate to="/" />
     return (

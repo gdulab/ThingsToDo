@@ -7,7 +7,6 @@ import { addColumn } from '../../redux/store';
 
 
 const ColumnForm = props => {
-    console.log(props);
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
     const [icon, setIcon] = useState('');
