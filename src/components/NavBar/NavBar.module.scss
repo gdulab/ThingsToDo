@@ -16,10 +16,18 @@
     display: flex;
 }
 
-.link {
-    color: white;
-    text-decoration: none;
+li {
+    list-style: none;
+    display: inline;
     margin: auto 10px;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.linkActive {
+    color: $color-warning;
 }
 
 .menuRight {
