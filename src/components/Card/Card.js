@@ -5,7 +5,6 @@ import { removeCard, toggleCardFavorite } from '../../redux/cardsReducer';
 
 const Card = props => {
     const dispatch = useDispatch();
-
     return (
         <li className={styles.card}>{props.title}
             <div>
