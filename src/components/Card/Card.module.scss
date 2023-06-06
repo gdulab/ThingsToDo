@@ -15,5 +15,10 @@
 }
 
 .active {
-    color: red;
+    color: $color-warning;
+}
+
+button {
+    background-color: white;
+    border: none;
 }
