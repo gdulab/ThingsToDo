@@ -42,10 +42,10 @@ const initialState = {
     cards: [
         { id: '1', columnId: '1', isFavourite: true, title: 'This is Going to Hurt' },
         { id: '2', columnId: '1', isFavourite: false, title: 'Interpreter of Maladies' },
-        { id: '3', columnId: '2', isFavourite: true, title: 'Harry Potter' },
+        { id: '3', columnId: '2', isFavourite: false, title: 'Harry Potter' },
         { id: '4', columnId: '2', isFavourite: false, title: 'Star Wars' },
         { id: '5', columnId: '3', isFavourite: false, title: 'The Witcher' },
-        { id: '6', columnId: '3', isFavourite: true, title: 'Skyrim' }
+        { id: '6', columnId: '3', isFavourite: false, title: 'Skyrim' }
     ],
 
     searchString: ''

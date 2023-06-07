@@ -11,7 +11,8 @@ const Card = props => {
                 <button
                     type="button"
                     onClick={e => dispatch(toggleCardFavorite(props.id))}
-                    className={clsx(props.isFavourite && styles.active)}>
+                    className={clsx(props.isFavourite && styles.active)}
+                >
                     <i className="fa fa-star-o"></i>
                 </button>
                 <button
