@@ -15,7 +15,7 @@ const Favorite = () => {
                 {cards.length ? (
                     <ul className={styles.cards}>
                         {
-                            cards.map(card => <Card key={card.id} id={card.id} title={card.title} isFavourite={card.isFavourite} />)
+                            cards.map(card => <Card key={card.id} id={card.id} title={card.title} isFavourite={card.isFavourite} onFavouriteList={true} />)
                         }
                     </ul>
                 ) : (

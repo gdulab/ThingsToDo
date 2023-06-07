@@ -5,6 +5,7 @@ import { removeCard, toggleCardFavorite } from '../../redux/cardsReducer';
 
 const Card = props => {
     const dispatch = useDispatch();
+    console.log(props);
     return (
         <li className={styles.card}>{props.title}
             <div>
@@ -15,12 +16,14 @@ const Card = props => {
                 >
                     <i className="fa fa-star-o"></i>
                 </button>
+                {!props.onFavouriteList ? (
                 <button
                     type="button"
                     onClick={e => dispatch(removeCard(props.id))}
                 >
                     <i className="fa fa-trash"></i>
                 </button>
+                ) : ('')}
             </div>
         </li>
     )
