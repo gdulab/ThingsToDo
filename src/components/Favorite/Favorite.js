@@ -8,30 +8,22 @@ import { getFavouriteCards } from '../../redux/cardsReducer';
 
 const Favorite = () => {
     const cards = useSelector(getFavouriteCards);
-    console.log(cards.length);
-    if (cards.length === 0) {
-        return (
-            <Container>
-                <PageTitle>Favorite</PageTitle>
-                <article className={styles.column}>
-                    <p>No favourite cards</p>
-                </article>
-            </Container>
-        )
-    } else {
-        return (
-            <Container>
-                <PageTitle>Favorite</PageTitle>
-                <article className={styles.column}>
+    return (
+        <Container>
+            <PageTitle>Favorite</PageTitle>
+            <article className={styles.column}>
+                {cards.length ? (
                     <ul className={styles.cards}>
                         {
                             cards.map(card => <Card key={card.id} id={card.id} title={card.title} isFavourite={card.isFavourite} />)
                         }
                     </ul>
-                </article>
-            </Container>
-        )
-    }
+                ) : (
+                    <p>No favourite cards</p>
+                )}
+            </article>
+        </Container>
+    )
 }
 
 export default Favorite;
